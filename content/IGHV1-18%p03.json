@@ -1,0 +1,10 @@
+{
+    "id": "IGHV1-18*p03",
+    "version": "12.3",
+    "crteated":"2012-04-23T18:25:43.511Z",
+    "last_update":"2012-04-23T18:25:43.511Z",
+    "sequence": "caggttcagctggtgcagtctggagctgaggtgaagaagcctggggcctcagtgaaggtctcctgcaaggcttctggttacacctttaccagctatggtatcagctgggtgcgacaggcccctggacaagggcttgagtggatgggatggatcagcgcttacaatggtaacacaaactatgcacagaagctccagggcagagtcaccatgaccacagacacatccacgagcacagcctacatggagctgaggagcctaagatctgacgacacggccgtgtattactgtgcgagaga",
+    "references": ["siff2008", "bar2009"],
+    "cyst":104,
+    "tryp": 96
+}
