@@ -76,6 +76,10 @@ def main(argv=sys.argv[1:]):
         data = {
             "id": name,
             "version": "1",
+            "species": "human",
+            "region" : 'v',
+            "confidence" : 3,
+            "alignment" : 12,
             "created": datetime.datetime.now().isoformat(),
             "last_update": datetime.datetime.now().isoformat(),
             "sequence": sequence,
