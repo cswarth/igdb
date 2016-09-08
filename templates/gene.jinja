@@ -1,4 +1,4 @@
-{% extends "templates/base.jinja" %}
+{% extends "base.jinja" %}
 {% block content %}
 <div class="row">
   <div class="span12">
@@ -30,7 +30,7 @@
               <span class="caret"></span>
 	    </a>
 	    <ul class="dropdown-menu">
-              <li><a href="">Download FASTSA sequence</a></li>
+              <li><a href="{{fastafile}}" download="{{id}}.fasta">Download FASTA sequence</a></li>
               <li><a href="">Download PHYLIP sequence</a></li>
               <li class="divider"></li>
               <li><a href="">Download Gene Record</a></li>
