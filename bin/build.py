@@ -64,7 +64,7 @@ class Gene(object):
         def to_fasta(seq):
             fp = StringIO()
             record = SeqRecord(Seq(seq, IUPAC.extended_dna),
-                                   id=self.data['id'])
+                                   id=self.data['id'], description="")
             SeqIO.write(record, fp,
                     'fasta')
             return fp.getvalue()
@@ -80,6 +80,35 @@ class Gene(object):
                 f.write(fasta)
 
         self.data['fastafile'] = digest
+        return outname
+        
+
+    # Write a PHYLIP file containing the gene id and nucleotide sequence.
+    # If `options.dryrun` is TRUE, don't actually write the file, but do everything else.
+    #
+    # return: string name of the fasta file.
+    def render_phylip(self):
+        print(self.data['id'])
+
+        def to_phylip(seq):
+            fp = StringIO()
+            seq = seq.replace('.', '-')
+            record = SeqRecord(Seq(seq, IUPAC.extended_dna),
+                                   id=self.data['id'])
+            SeqIO.write(record, fp, 'phylip-relaxed')
+            return fp.getvalue()
+
+        
+        fasta = to_phylip(self.data['sequence'])
+        
+        digest = hashlib.sha1(fasta).hexdigest()
+        print('phylip -> {}'.format(digest))
+        outname = os.path.join(options.output, digest)
+        if not options.dryrun:
+            with open(outname, "w") as f:
+                f.write(fasta)
+
+        self.data['phylipfile'] = digest
         return outname
         
 
@@ -143,18 +172,16 @@ def main():
 
     # produce web page and various download files.
     # web page should be allowed to download any of the available formats.
-    
-    # Read the index
-    # produce individual pages
-    # Each has the name, sequence, evidence,and dowload links
-    # produce the downloadable content
-    # filterable?
-    for (i,f) in enumerate(content_file_iterator(options.content)):
-        g = Gene.fromfile(f)
+
+    objects = (Gene.fromfile(f) for f in content_file_iterator(options.content))
+    for g in objects:
         if g is not None:
             g.render_fasta()
+            g.render_phylip()
             g.render_html()
 
+    
+            
     
     # idx = pd.read_csv(os.path.join(a.content, 'index.csv'))
     # for row in idx.itertuples(index=False):
