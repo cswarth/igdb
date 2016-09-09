@@ -136,7 +136,7 @@ class Gene(object):
         if not options.dryrun:
             with open(outname, "w") as f:
                 f.write(html)
-        self.htmlfile = outname
+        self.htmlfile = digest
         return outname
 
 
@@ -173,15 +173,35 @@ def main():
     # produce web page and various download files.
     # web page should be allowed to download any of the available formats.
 
-    objects = (Gene.fromfile(f) for f in content_file_iterator(options.content))
+    objects = [Gene.fromfile(f) for f in content_file_iterator(options.content)]
+    objects = [o for o in objects if o is not None]
     for g in objects:
         if g is not None:
             g.render_fasta()
             g.render_phylip()
             g.render_html()
 
-    
-            
+
+
+    # render the index page
+    renderdict = {
+        'date': datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        'command': " ".join(sys.argv),
+        'workdir': os.getcwd(),
+        'user': getpass.getuser(),
+        'title': 'IgDB',
+        'genes': objects
+        }
+    print(objects)
+    index_tpl = load_template('index.jinja')
+    page = index_tpl.render(**renderdict) 
+    html = page.encode('utf-8')
+    print(html)
+    outname = os.path.join(options.output, 'index.html')
+    if not options.dryrun:
+            with open(outname, "w") as f:
+                f.write(html)
+
     
     # idx = pd.read_csv(os.path.join(a.content, 'index.csv'))
     # for row in idx.itertuples(index=False):
