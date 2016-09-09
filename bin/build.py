@@ -159,7 +159,7 @@ def main():
     p.add_argument('-o', '--output', default="output",
             help="""Directory where output should be left: %(default)]""")
     p.add_argument('-n', '--dryrun', action='store_true',
-            help="""dry run""")
+            help="""do everythign short of writing to the filesystem.""")
     p.add_argument('-v', '--verbose', default=False,
             help="""enable verbose output""")
 

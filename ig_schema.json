@@ -1,0 +1,73 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Immunoglobin information",
+    "type": "object",
+    "properties": {
+	"version": {
+	    "description": "Schema version string (not the content version), following the SchemaVer format as described at http://snowplowanalytics.com/blog/2014/05/13/introducing-schemaver-for-semantic-versioning-of-schemas/",
+            "type": "string",
+	    "pattern": "^[0-9]+-[0-9]+-[0-9]+$"
+	},
+        "id": {
+            "description": "The unique identifier consistent witht he requirements in 'WHO-IUIS Nomenclature Subcommittee for immunoglobulins and T cell receptors report', PMID: 18036660, 18046549",
+            "type": "string"
+        },
+        "species": {
+            "description": "Binomial species name as determined by International Code of Nomenclature for algae, fungi, and plants (ICN), e.g. `homo sapien`, `mus musculus`",
+            "type": "string",
+	    "enum": ["homo sapien", "mus musculus"],
+	    "pattern": "^[a-z]+ [a-z]+$"
+        },
+	"family": {
+            "description": "Immunoglobin family name",
+            "type": "string"
+	},
+	"position": {
+	    "description": "Position along IG locus",
+	    "type": "number",
+	    "minimum": 0
+	},
+	"germline-evidence": {
+	    "description": "Numerical measure of germline sequencing evidence for this sequence.",
+	    "type": "number",
+	    "minimum": 0
+	},
+	"expression-evidence": {
+	    "description": "Numerical measure of expression evidence for this sequence.",
+	    "type": "number",
+	    "minimum": 0
+	},
+	"studies-evidence": {
+	    "description": "Overall measure of studies providing evidence for this germline sequence.",
+	    "type": "number",
+	    "minimum": 0
+	},
+	"sequence": {
+	    "description": "Nucleotide sequence, without gaps.  This is a raw sequence, not an alignment.",
+	    "type":"string"
+	},
+	"created": {
+	    "description": "Date this record was created.  This value is not modified after creation.",
+	    "type": "string",
+	    "format": "date-time"
+	},
+	"updated": {
+	    "description": "Date this record was last updated.",
+	    "type": "string",
+	    "format": "date-time"
+	},
+	"cyst_position": {
+	    "description": "zero-based nucleotide position along the sequence of signal Cysteain residue.",
+	    "type": "number"
+	},
+	"tryp_position": {
+	    "description": "zero-based nucleotide position along the sequence of signal Cysteain residue.",
+	    "type": "number"
+	},
+	"phen_position": {
+	    "description": "zero-based nucleotide position along the sequence of signal Cysteain residue.",
+	    "type": "number"
+	}
+    },
+    "required": ["version", "id", "species", "family", "created", "sequence"]
+}

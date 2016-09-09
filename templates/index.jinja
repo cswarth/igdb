@@ -1,0 +1,17 @@
+{% extends "base.jinja" %}
+{% block content %}
+<div class="row">
+  <div class="span12">
+
+    <table>
+    {%- for gene in genes -%}
+      <tr>
+	<td><a href="{{gene.htmlfile}}">{{gene.data['id']}}</a></td>
+      </tr>
+    {%-endfor-%}
+    </table>
+      
+  </div>
+</div>
+  {% endblock %}
+
