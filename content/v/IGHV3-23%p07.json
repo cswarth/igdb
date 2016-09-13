@@ -1,0 +1,12 @@
+{
+    "allele": "p07",
+    "created": "2016-09-09T14:22:10.119433",
+    "family": "IGHV",
+    "id": "IGHV3-23*p07",
+    "last_update": "2016-09-09T14:22:10.119466",
+    "position": 0,
+    "sequence": "gaggtgcagctggtggagtctgggggaggcttggtacagcctggggggaccctgagactctcctgtgcagcctctggattcacctttagcagctatggcatgagctgggtccgccaggctccagggaaggggctggagtgggtctcagctattagtggtagtggtggtagcacatactacgcagactccgtgaagggccggttcaccatctccagagacaattccaagaacacgctgtatctgcaaatgaacagcctgagagccgaggacacggccgtatattactgtgcgaaaga",
+    "species": "homo sapien",
+    "type": "V",
+    "version": "0-0-1"
+}

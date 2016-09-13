@@ -1,0 +1,12 @@
+{
+    "allele": "p10",
+    "created": "2016-09-09T14:23:05.891822",
+    "family": "IGHV",
+    "id": "IGHV6-1*p10",
+    "last_update": "2016-09-09T14:23:05.891859",
+    "position": 0,
+    "sequence": "caggtacagctgcagcagtcaggtccaggactggtgaagccctcgcagaccctctcactcacctgtgccatctccggggacagtgtctctagcaacagtgctgcttggaactggatcaggcagtccccatcgagaggccttgagtggctgggaaggacatactacaggtccaagtggtataatgattatgcagtatctgtgaaaagtgaataaccatcaacccagacacatccaagaaccagttctccctgcagctgaactctgtgactcccgaggacacggctgtgtattactgtgcaag",
+    "species": "homo sapien",
+    "type": "V",
+    "version": "0-0-1"
+}

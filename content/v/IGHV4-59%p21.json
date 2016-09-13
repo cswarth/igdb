@@ -1,0 +1,12 @@
+{
+    "allele": "p21",
+    "created": "2016-09-09T14:22:24.119909",
+    "family": "IGHV",
+    "id": "IGHV4-59*p21",
+    "last_update": "2016-09-09T14:22:24.119944",
+    "position": 0,
+    "sequence": "caggtgcagctgcaggagtcgggcccaggactggtgaagccttcggagaccctgtccctcacctgcactgtctctggtggctccatcagtagttactactggagctggatccggcagcccccagggaagggactggagtggattgggtatatctattacagtgggagcaccaactacaacccctccctcaagagtcgagtcaccatatcagtagacacgtccaagaaccagttctccctgaagctgagctctgtgaccgccgcggacacggccgtgtattactgtgcgagaca",
+    "species": "homo sapien",
+    "type": "V",
+    "version": "0-0-1"
+}

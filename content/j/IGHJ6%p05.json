@@ -1,0 +1,12 @@
+{
+    "allele": "p05",
+    "created": "2016-09-09T14:20:47.340853",
+    "family": "IGHJ",
+    "id": "IGHJ6*p05",
+    "last_update": "2016-09-09T14:20:47.340892",
+    "position": 0,
+    "sequence": "attactactactactactacatggacgtctggggccaagggaccacggtcaccgtctcctca",
+    "species": "homo sapien",
+    "type": "J",
+    "version": "0-0-1"
+}

@@ -1,0 +1,12 @@
+{
+    "allele": "p12",
+    "created": "2016-09-09T14:21:57.172921",
+    "family": "IGHV",
+    "id": "IGHV3-64*p12",
+    "last_update": "2016-09-09T14:21:57.172957",
+    "position": 0,
+    "sequence": "gaggtgcagctggtggagtctgggggaggcttggtccagcctggggggtccctgagactctcctgttcagcctctggattcaccttcagtagctatgctatgcactgggtccgccaggctccagggaagggactggaatatgtttcagctattagtagtaatgggggtagcacatactacgcagactccgtgaagggcagattcaccatctccagagacaattccaagaacacgctgtatcttcaaatgagcagtctgagagctgaggacacggctgtgtattactgtgtgaga",
+    "species": "homo sapien",
+    "type": "V",
+    "version": "0-0-1"
+}

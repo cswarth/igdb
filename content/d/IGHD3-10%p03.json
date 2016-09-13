@@ -1,0 +1,12 @@
+{
+    "allele": "p03",
+    "created": "2016-09-09T14:23:34.534826",
+    "family": "IGHD",
+    "id": "IGHD3-10*p03",
+    "last_update": "2016-09-09T14:23:34.534874",
+    "position": 0,
+    "sequence": "tactatggttcagggagttattataac",
+    "species": "homo sapien",
+    "type": "D",
+    "version": "0-0-1"
+}

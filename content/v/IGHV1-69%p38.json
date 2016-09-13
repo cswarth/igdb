@@ -1,0 +1,12 @@
+{
+    "allele": "p38",
+    "created": "2016-09-09T14:21:08.709818",
+    "family": "IGHV",
+    "id": "IGHV1-69*p38",
+    "last_update": "2016-09-09T14:21:08.709866",
+    "position": 0,
+    "sequence": "caggtccagctggtgcagtctggggctgaggtgaagaagcctggatcctcagtgaaggtctcctgcaaggcttctggaggcaccttcagcagctatgctatcagctgggtgcgacaggcccctggacaagggcttgagtggatgggagggatcatccctatctttggtacagcaaactacgcacagaagttccagggcagagtcacgattaccgcggacgaatccacgagcacagcctacatggagctgagcagcctgagatctgaggacacggccgtgtattactgtgcgagaga",
+    "species": "homo sapien",
+    "type": "V",
+    "version": "0-0-1"
+}

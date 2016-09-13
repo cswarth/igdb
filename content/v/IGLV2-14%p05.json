@@ -1,0 +1,12 @@
+{
+    "allele": "p05",
+    "created": "2016-09-09T14:23:26.226999",
+    "family": "IGLV",
+    "id": "IGLV2-14*p05",
+    "last_update": "2016-09-09T14:23:26.227051",
+    "position": 0,
+    "sequence": "cagtctgccctgactcagcctgcctccgtgtctgggtctcctggacagtcgatcaccatctcctgcactggaaccagcagtgacgttggtggttataactatgtctcctggtaccaacaacacccaggcaaagcccccaaactcatgatttatgatgtcagtaatcggccctcaggggtttctaatcgcttctctggctccaagtctggcaacacggcctccctgaccatctctgggctccaggctgaggacgaggctgattattactgcagctcatatacaagcagcagcactctc",
+    "species": "homo sapien",
+    "type": "V",
+    "version": "0-0-1"
+}

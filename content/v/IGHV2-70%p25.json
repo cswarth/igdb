@@ -1,0 +1,12 @@
+{
+    "allele": "p25",
+    "created": "2016-09-09T14:21:26.149464",
+    "family": "IGHV",
+    "id": "IGHV2-70*p25",
+    "last_update": "2016-09-09T14:21:26.149516",
+    "position": 0,
+    "sequence": "caggtcaccttgaaggagtctggtcctgcgctggtgaaacccacacagaccctcacgctgacctgcaccttctctgggttctcactcagcactagtggaatgcgtgtgagctggatccgtcagcccccagggaaggccctggagtggcttgcacgcattgattgggatgatgataaatactgcagcacatctctgaagaccaggctcaccatctccaaggacacctccaaaaaccaggtggtccttacaatgaccaacatggaccctgtggacacagccacgtattactgtgcacggat",
+    "species": "homo sapien",
+    "type": "V",
+    "version": "0-0-1"
+}

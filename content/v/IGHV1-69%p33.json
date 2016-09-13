@@ -1,0 +1,12 @@
+{
+    "allele": "p33",
+    "created": "2016-09-09T14:21:05.957859",
+    "family": "IGHV",
+    "id": "IGHV1-69*p33",
+    "last_update": "2016-09-09T14:21:05.957897",
+    "position": 0,
+    "sequence": "aggtgaagaagcctgggtcctcagtgaaggtctcctgcaaggcttctggaggcaccttcagcagctatgctatcagctgggtgcgacaggcccctggacaagggcttgagtggatgggagggatcatccctatctttggtacagcaaactacgcacagaagttccagggcagagtcacgattaccgcggacaaatccacgagcacagcctacatggagctgagcagcctgagatctgaggacacggccgtgtattactgtgcgagaga",
+    "species": "homo sapien",
+    "type": "V",
+    "version": "0-0-1"
+}

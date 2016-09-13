@@ -1,0 +1,12 @@
+{
+    "allele": "p13",
+    "created": "2016-09-09T14:22:38.101086",
+    "family": "IGHV",
+    "id": "IGHV4-31*p13",
+    "last_update": "2016-09-09T14:22:38.101120",
+    "position": 0,
+    "sequence": "caggtgcagctgcaggagtcgggcccaggactggtgaagccttcacagaccctgtccctcacctgcgctgtctctggtggctccatcagcagtggtggttactactggagctggatccgccagcacccagggaagggcctggagtggattgggtacatctattacagtgggagcacctactacaacccgtccctcaagagtcgagttaccatatcagtagacacgtctaagaaccagttctccctgaagctgagctctgtgactgccgcggacacggccgtgtattactgtgcgagaga",
+    "species": "homo sapien",
+    "type": "V",
+    "version": "0-0-1"
+}

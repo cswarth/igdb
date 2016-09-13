@@ -1,0 +1,12 @@
+{
+    "allele": "p28",
+    "created": "2016-09-09T14:21:27.777311",
+    "family": "IGHV",
+    "id": "IGHV2-70*p28",
+    "last_update": "2016-09-09T14:21:27.777362",
+    "position": 0,
+    "sequence": "caggtcaccttgaaggagtctggtcctgcgctggtgaaacccacacagaccctcacgctgacctgcaccttctctgggttctcactcagcactagtggaatgcgtgtgtgctggatccgtcagcccccagggaaggccctggagtggcttgcacgcattgattgggatgatgataaatactgcagcacatctctgaagaccaggctcaccatctccaaggccacctccaaaaaccaggtggtccttacaatgaccaacatggaccctgtggacacagccacgtattactgtgcacggat",
+    "species": "homo sapien",
+    "type": "V",
+    "version": "0-0-1"
+}

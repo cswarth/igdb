@@ -1,0 +1,12 @@
+{
+    "allele": "p08",
+    "created": "2016-09-09T14:21:32.473336",
+    "family": "IGHV",
+    "id": "IGHV2-26*p08",
+    "last_update": "2016-09-09T14:21:32.473374",
+    "position": 0,
+    "sequence": "caggtcaccttgaaggagtctggtcctgcgctggtgaaacccacagagaccctcacgctgacctgcaccgtctctgggttctcactcagcaatgctagaatgggtgtgagctggatccgtcagcccccagggaaggccctggagtggcttgcacacattttttcgaatgacgaaaaatcctacagcacatctctgaagagcaggctcaccatctccaaggacacctccaaaagccaggtggtccttaccatgaccaacatggaccctgtggacacagccacatattactgtgcacggat",
+    "species": "homo sapien",
+    "type": "V",
+    "version": "0-0-1"
+}

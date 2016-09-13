@@ -1,0 +1,12 @@
+{
+    "allele": "p15",
+    "created": "2016-09-09T14:22:20.852344",
+    "family": "IGHV",
+    "id": "IGHV4-59*p15",
+    "last_update": "2016-09-09T14:22:20.852380",
+    "position": 0,
+    "sequence": "caggtgcagctgcaggagtcgggcccaggactggtgaagccttcggagaccctgtccctcacctgcactgtctctggtggctccatcagtagtcactactggagctggatccggcagcccccagggaagggactggagtggattgggtatatctattacagtgggagcaccaactacaacccctccctcaagagtcgagtcaccatatcagtagacacgtccaagaaccagttctccctgaagctgagctctgtgaccgctgcggacacggccgtgtattactgtgcgagaga",
+    "species": "homo sapien",
+    "type": "V",
+    "version": "0-0-1"
+}

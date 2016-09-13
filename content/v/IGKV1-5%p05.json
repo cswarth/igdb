@@ -1,0 +1,12 @@
+{
+    "allele": "p05",
+    "created": "2016-09-09T14:23:10.493300",
+    "family": "IGKV",
+    "id": "IGKV1-5*p05",
+    "last_update": "2016-09-09T14:23:10.493405",
+    "position": 0,
+    "sequence": "gacatccagatgacccagtctccttccaccctgtctgcatctgtaggagacagagtcaccatcacttgccgggccagtcagagtattagtagctggttggcctggtatcagcagaaaccagggaaagcccctaagctcctgatctataaggcatctagtttagaaagtggggtcccatcaaggttcagcggcagtggatctgggacagaattcactctcaccatcagcagcctgcagcctgatgattttgcaacttattactgccaacagtataatagttattctcc",
+    "species": "homo sapien",
+    "type": "V",
+    "version": "0-0-1"
+}
