@@ -58,15 +58,18 @@
 	},
 	"cyst_position": {
 	    "description": "zero-based nucleotide position along the sequence of signal Cysteain residue.",
-	    "type": "number"
+	    "type": "number",
+	    "minimum": 0
 	},
 	"tryp_position": {
-	    "description": "zero-based nucleotide position along the sequence of signal Cysteain residue.",
-	    "type": "number"
+	    "description": "zero-based nucleotide position along the sequence of signal Tryptophan residue.",
+	    "type": "number",
+	    "minimum": 0
 	},
 	"phen_position": {
-	    "description": "zero-based nucleotide position along the sequence of signal Cysteain residue.",
-	    "type": "number"
+	    "description": "zero-based nucleotide position along the sequence of signal Phenylalanine residue.",
+	    "type": "number",
+	    "minimum": 0
 	}
     },
     "required": ["version", "id", "species", "family", "created", "sequence"]
