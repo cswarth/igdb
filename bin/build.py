@@ -73,13 +73,13 @@ class Gene(object):
         fasta = to_fasta(self.data['sequence'])
         
         digest = hashlib.sha1(fasta).hexdigest()
+        self.data['fastafile'] = digest+".fa"
         print('fasta -> {}'.format(digest))
-        outname = os.path.join(options.output, digest)
+        outname = os.path.join(options.output, self.data['fastafile'] )
         if not options.dryrun:
             with open(outname, "w") as f:
                 f.write(fasta)
 
-        self.data['fastafile'] = digest
         return outname
         
 
@@ -102,13 +102,14 @@ class Gene(object):
         fasta = to_phylip(self.data['sequence'])
         
         digest = hashlib.sha1(fasta).hexdigest()
-        print('phylip -> {}'.format(digest))
-        outname = os.path.join(options.output, digest)
+        self.data['phylipfile'] = digest+".phy"
+
+        print('phylip -> {}'.format(self.data['phylipfile']))
+        outname = os.path.join(options.output, self.data['phylipfile'])
         if not options.dryrun:
             with open(outname, "w") as f:
                 f.write(fasta)
 
-        self.data['phylipfile'] = digest
         return outname
         
 
@@ -131,12 +132,12 @@ class Gene(object):
 
         # write the html to a file named with the sha1 hash of its contents.
         digest = hashlib.sha1(html).hexdigest()
-        print('{} -> {}'.format(self.data['id'], digest))
-        outname = os.path.join(options.output, digest)
+        self.htmlfile = digest+".htm"
+        print('{} -> {}'.format(self.data['id'], self.htmlfile))
+        outname = os.path.join(options.output, self.htmlfile)
         if not options.dryrun:
             with open(outname, "w") as f:
                 f.write(html)
-        self.htmlfile = digest
         return outname
 
 
@@ -164,9 +165,7 @@ def main():
             help="""enable verbose output""")
 
     global options
-    print(type(options))
     options = p.parse_args()
-    print(type(options))
 
     # read in JSON file
 
@@ -192,17 +191,19 @@ def main():
         'title': 'IgDB',
         'genes': objects
         }
-    print(objects)
     index_tpl = load_template('index.jinja')
     page = index_tpl.render(**renderdict) 
     html = page.encode('utf-8')
-    print(html)
+
     outname = os.path.join(options.output, 'index.html')
     if not options.dryrun:
             with open(outname, "w") as f:
                 f.write(html)
 
-    
+    print("Static Web pages created.\n"
+          "Upload the content to Amazon S3 with,\n"
+		  "	s3cmd sync -P --delete-removed output/ s3://ogrdb")
+
     # idx = pd.read_csv(os.path.join(a.content, 'index.csv'))
     # for row in idx.itertuples(index=False):
     #     print(row)

@@ -4,9 +4,9 @@
   <div class="span12">
 
     <table>
-    {%- for gene in genes -%}
+    {%- for key, value in genes.iteritems() -%}
       <tr>
-	<td><a href="{{gene.htmlfile}}">{{gene.data['id']}}</a></td>
+	<td><a href="{{url_for('gene_page',id=key)}}">{{key}}</a></td>
       </tr>
     {%-endfor-%}
     </table>

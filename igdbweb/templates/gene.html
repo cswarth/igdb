@@ -23,22 +23,8 @@
 
 	{{references}}<br/>
 
-	<div class="pull-right">
-	  <div class="btn-group">
-	    <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-              Action
-              <span class="caret"></span>
-	    </a>
-	    <ul class="dropdown-menu">
-              <li><a href="{{fastafile}}" download="{{id}}.fasta">Download FASTA sequence</a></li>
-              <li><a href="">Download PHYLIP sequence</a></li>
-              <li class="divider"></li>
-              <li><a href="">Download Gene Record</a></li>
-	    </ul>
-	  </div>
-	</div>
 
-	Sequence:&nbsp;&nbsp;&nbsp;<a href="{{fastafile}}" download="{{id}}.fasta">FASTA</a>&nbsp;&nbsp;&nbsp;<a href="{{phylipfile}}" download="{{id}}.phylip">PHYLIP</a>  <br/>
+	Sequence:&nbsp;&nbsp;&nbsp;<a href="{{url_for("gene_fasta", id=id)}}" download="{{id}}.fasta">FASTA</a>&nbsp;&nbsp;&nbsp;<a href="{{url_for("gene_phylip", id=id)}}" download="{{id}}.phy">PHYLIP</a>  <br/>
 	<div class="seq">>{{id}}<br/>
 	  <code>
 {{sequence | wordwrap(wrapstring="<br/>") }}

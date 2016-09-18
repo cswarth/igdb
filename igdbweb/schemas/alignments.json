@@ -1,0 +1,85 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Region information",
+    "description":
+    	"The Alignments section defines, for each V-gene defined in the Sequences section, the numbering of the sequence according to a defined scheme. The default numbering starts at position 1, and rises incrementally without breaks. This default can be overridden via records in this section. The section is optional. Where it is omitted, default numbering should be used. Likewise, individual records are optional, and, where omitted, default numbering should be used.",
+    "type": "object",
+    "required": ["title", "authors", "institution", "species", "additional information", "version", "date", "origination reference", "regions"],
+    "properties": {
+	"title": {
+	    "description": "Brief descriptive title of the numbering definition: for example 'IMGT numbering for the Mouse gene'",
+	    "type": "string"
+	},
+	"authors": {
+	    "description": "Name of originating author(s)",
+	    "type": "string"
+	},
+	"institution": {
+	    "description": "Name of originating institution(s)",
+	    "type": "string"
+	},
+	"species": {
+	    "description": "Biological species name, e.g. Giraffa camelopardalis",
+	    "type": "string"
+	},
+	"subspecific name": {
+	    "description": "Biological subspecific name, e.g. rothschildi",
+	    "type": "string"
+	},
+	"additional information": {
+	    "description": "Additional qualifying information, eg ethnicity, geography, transgenic organism",
+	    "type": "string"
+	},
+	"version": {
+	    "description": "Three-part version number (nn.nn.nn), issued by the Authors",
+	    "type": "string",
+	    "pattern": "^[0-9]+-[0-9]+-[0-9]+$"
+	},
+	"date": {
+	    "description": "Issue date, issued by the Authors",
+	    "type": "string",
+	    "format": "date-time"
+	},
+	"origination": {
+	    "description": "Where the section is created by a service or database, this field should identify the database or service concerned",
+	    "type": "string"
+	},
+	"origination reference": {
+	    "description": "Where the section is created by a service or database, this field may provide a reference number or other string to facilitate cross-reference. Where it is provided, the combination of the Origination and Origination Reference fields should uniquely identify the sequences section.",
+	    "type": "string"
+	},
+	"alignments": {
+	    "description": "Array of individual alignments, all of which share the front matter specified above.",
+	    "type": "array",
+	    "items": { "$ref": "alignment" }
+	}
+    },
+
+			
+    "definitions": {
+        "alignment": {
+	    "id": "alignment",
+	    "type": "object",
+	    "required": ["database of record", "id", "name", "chain type", "segment", "sequence", "confidence", "codon frame"],
+	    "properties": {
+		"database of record": {
+		    "description": "Database of record in which the sequence is deposited (can be 'local' if no deposition has been made)",
+		    "type": "string"
+		},
+		"ID": {
+		    "type": "string",
+		    "description": "Unique identifier issued by the database of record (or a locally issued identifier if no deposition has been made)"
+		},
+		"start": {
+		    "description": "Codon number of the first position of the sequence as specified in the Sequencing section",
+		    "type": "number",
+		    "minimum": 0
+		},
+		"alignment": {
+		    "description": "A definition of the alignment, with provision to accommodate commonly used numbering schemes ",
+		    "type": "string"
+		}
+	    }
+	}
+    }
+}
