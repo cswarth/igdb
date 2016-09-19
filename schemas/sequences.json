@@ -1,0 +1,103 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Sequences information",
+    "description": "The Sequences section details all germline sequences in the germline set. As well as listing the sequences themselves, the section embodies the naming scheme, in that it incorporates the display names of individual genes and the chains to which they are assigned. Sequences are assumed to be deposited in a database of record, such as Genbank. Sequences as specified in this section should not be aligned.",
+    "type": "object",
+    "required": ["title", "authors", "institution", "species", "additional information", "version", "issue date", "origination", "origination reference", "sequences"],
+    "properties": {
+        "title": {
+            "description": "Brief descriptive title of the set of sequences",
+            "type": "string"
+        },
+	"authors": {
+            "description": "Name of originating author(s)",
+            "type": "string"
+	},
+	"institution": {
+            "description": "Name of originating institution(s)",
+            "type": "string"
+	},
+	"species": {
+            "description": "Binomial species name as determined by International Code of Nomenclature for algae, fungi, and plants (ICN), e.g. `homo sapien`, `mus musculus`",
+            "type": "string",
+	    "enum": ["homo sapien", "mus musculus"],
+	    "pattern": "^[a-z]+ [a-z]+$"
+	},
+	"subspecies": {
+            "description": "Biological subspecific name, e.g. rothschildi",
+            "type": "string"
+	},
+	"additional information": {
+            "description": "Additional qualifying information, eg ethnicity, geography, transgenic organism",
+            "type": "string"
+	},
+	"version": {
+            "description": "Three-part version number (nn.nn.nn), issued by the Authors",
+            "type": "string",
+	    "pattern": "^[0-9]+-[0-9]+-[0-9]+$"
+	},
+	"issue date": {
+            "description": "Issue date, issued by the Authors",
+            "type": "string"
+	},
+	"origination": {
+            "description": "Where the section is created by a service or database, this field should identify the database or service concerned",
+            "type": "string"
+	},
+	"origination reference": {
+            "description": "Where the section is created by a service or database, this field may provide a reference number or other string to facilitate cross-reference. Where it is provided, the combination of the Origination and Origination Reference fields should uniquely identify the sequences section.",
+            "type": "string"
+	},
+	"sequences": {
+	    "description": "Array of individual sequences, all of which share the front matter specified above.",
+	    "type": "array",
+	    "items": { "$ref": "sequence" }
+	}
+    },
+    
+    "definitions": {
+        "sequence": {
+	    "id": "sequence",
+	    "type": "object",
+	    "required": ["database of record", "id", "name", "chain type", "segment", "sequence", "confidence", "codon frame"],
+	    "properties": {
+		"database of record":{
+		    "type": "string",
+		    "description": "Database of record in which the sequence is deposited, e.g. www.igpdb.com, IgBlast, IMGT.  Use 'local' if no deposition has been made."
+		},
+		"id": {
+		    "type": "string",
+		    "description": "Unique identifier issued by the database of record, e.g SRA29292, or a locally issued identifier if no deposition has been made"
+		},
+		"name": {
+		    "type": "string",
+		    "description": "The name that should be displayed by the parser when referring to the gene"
+		},
+		"chain type": {
+		    "description": "Heavy or Light",
+		    "enum": [ "heavy", "light" ]
+		},
+		"chain subtype": {
+		    "description": "Used to distinguish light chain types. Omitted for heavy chain sequences. Mandatory for light chains where more than one type exists for the organism.",
+		    "enum": [ "lambda", "kappa", "sigma", "sigma2" ]
+		},
+		"segment": {
+		    "enum": [ "v", "d", "j" ]
+		},
+		"sequence": {
+		    "description": "IUPAC nucleotide notation nt sequence of the gene",
+		    "type": "string",
+		    "pattern": "^[acgt-.]+$"
+		},
+		"confidence": {
+		    "type": "string",
+		    "description": "A measure of sequence confidence, possibly related to its derivation (e.g. derived from genome, or inferred from repertoire). Form to be defined."
+		},
+		"codon frame": {
+		    "description": "Codon position of the first sequence symbol. Mandatory for J genes and V genes. Not used for D genes.",
+		    "enum": [ "1", "2", "3" ]
+		}
+	    }
+	}
+    }
+}
