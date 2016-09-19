@@ -1,0 +1,37 @@
+
+box: continuumio/miniconda
+
+# comment
+build:
+  steps:
+    - script:
+        name: Install dependencies
+        code: |
+             conda install -y pandas jinja2 flask frozen-flask
+             pip install git+git://github.com/cswarth/igdbweb@master
+
+    - script:
+        name: convert to html
+        code: |
+          env
+          python -m igdbweb -f -c ../igdb/content -o $PWD/build
+          
+
+#        - lukevivier/gh-pages:
+deploy:
+  steps:
+    - script:
+        name: Install dependencies
+        code: |
+             env | grep WERCKER
+             pwd
+             echo foo
+             echo ls -l  "$WERCKER_OUTPUT_DIR"
+             ls -l  "$WERCKER_OUTPUT_DIR"
+             echo bar
+    
+    - ematsen/gh-pages:
+        token: $GITHUB_TOKEN
+        repo: "$WERCKER_GIT_OWNER/$WERCKER_GIT_REPOSITORY"
+        path: "$WERCKER_SOURCE_DIR"
+        
