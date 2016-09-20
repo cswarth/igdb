@@ -22,14 +22,7 @@ build:
 
 deploy:
   steps:
-    - script:
-        name: show environment
-        code: |
-          env
-          pwd
-
     - s3sync:
-        source-dir: "${WERCKER_SOURCE_DIR}"
         delete-removed: false
         bucket-url: $AWS_S3_BUCKET
         key-id: $AWS_ACCESS_KEY_ID
