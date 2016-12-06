@@ -9,7 +9,7 @@
 	    "pattern": "^[0-9]+-[0-9]+-[0-9]+$"
 	},
         "id": {
-            "description": "The unique identifier consistent witht he requirements in 'WHO-IUIS Nomenclature Subcommittee for immunoglobulins and T cell receptors report', PMID: 18036660, 18046549",
+            "description": "The unique identifier consistent with he requirements in 'WHO-IUIS Nomenclature Subcommittee for immunoglobulins and T cell receptors report', PMID: 18036660, 18046549",
             "type": "string"
         },
         "species": {
